@@ -11,19 +11,40 @@
     <div id="input-section">
         <h2>Enter Process Details</h2>
         <form id="process-form">
-            <label for="process-id">Process ID:</label>
-            <input type="number" id="process-id" required><br>
-            <label for="arrival-time">Arrival Time:</label>
-            <input type="number" id="arrival-time" required><br>
-            <label for="burst-time">Burst Time:</label>
-            <input type="number" id="burst-time" required><br>
-            <button type="submit">Add Process</button>
+            <label for="num-processes">Number of Processes:</label>
+            <input type="number" id="num-processes" required><br>
+
+            <label for="time-quantum">Time Quantum:</label>
+            <input type="number" id="time-quantum" required><br>
+
+            <button type="submit">Submit Process Count & Time Quantum</button>
         </form>
     </div>
+
+    <div id="process-inputs-section" style="display: none;">
+        <h2>Enter Process Details for Each Process</h2>
+        <form id="process-details-form"></form>
+        <button id="submit-all-processes">Submit All Processes</button>
+    </div>
+
     <div id="output-section">
         <h2>Results</h2>
-        <pre id="results"></pre>
+        <div id="results">
+            <table id="results-table">
+                <thead>
+                    <tr>
+                        <th>Algorithm</th>
+                        <th>Waiting Time</th>
+                        <th>Turnaround Time</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Results will be dynamically inserted here -->
+                </tbody>
+            </table>
+        </div>
     </div>
+
     <script src="script.js"></script>
 </body>
 </html>
